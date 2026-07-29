@@ -12,11 +12,26 @@ form.addEventListener("submit", async (e) => {
 
     const result = await response.json();
 
-    if (result.success) {
-        alert("Booking submitted successfully!");
-        form.reset();
-    } else {
-        alert("Submission failed.");
-        console.log(result);
-    }
+if (result.success) {
+    form.reset();
+
+    const success = document.createElement("div");
+    success.className = "success-popup";
+    success.innerHTML = `
+        <i class="fa-solid fa-circle-check"></i>
+        <span>Booking submitted successfully!</span>
+    `;
+
+    document.body.appendChild(success);
+
+    setTimeout(() => success.classList.add("show"), 10);
+
+    setTimeout(() => {
+        success.classList.remove("show");
+        setTimeout(() => success.remove(), 300);
+    }, 3000);
+
+} else {
+    alert("Failed to submit booking.");
+}
 });
