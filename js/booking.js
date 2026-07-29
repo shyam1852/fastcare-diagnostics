@@ -13,7 +13,7 @@ form.addEventListener("submit", async (e) => {
     };
 
     try {
-        const response = await fetch("https://fastcare-diagnostics.onrender.com/book-test", {
+        fetch("http://localhost:5000/book-test", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -30,7 +30,7 @@ form.addEventListener("submit", async (e) => {
             alert("Failed to submit booking.");
         }
     } catch (err) {
-        console.error(err);
-        alert("Server error.");
-    }
+    console.dir(err);
+    alert("Server error.");
+}
 });
