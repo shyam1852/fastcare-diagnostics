@@ -12,8 +12,8 @@ app.use(express.json());
 const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-        user: process.env.EMAIL,
-        pass: process.env.PASSWORD
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS
     }
 });
 
@@ -29,8 +29,8 @@ app.post("/book-test", async (req, res) => {
     } = req.body;
 
     const mailOptions = {
-        from: process.env.EMAIL,
-        to: process.env.EMAIL,
+        from: process.env.EMAIL_USER,
+        to: process.env.EMAIL_USER,
         subject: "New Blood Test Booking",
         html: `
             <h2>New Booking Received</h2>
@@ -54,6 +54,8 @@ app.post("/book-test", async (req, res) => {
 
 });
 
-app.listen(5000, () => {
-    console.log("Server running on port 5000");
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
 });
