@@ -50,9 +50,14 @@ app.post("/book-test", async (req, res) => {
         await transporter.sendMail(mailOptions);
         res.json({ success: true });
     } catch (err) {
-        console.log(err);
-        res.status(500).json({ success: false });
-    }
+    console.error("EMAIL ERROR:");
+    console.error(err);
+
+    res.status(500).json({
+        success: false,
+        error: err.message
+    });
+}
 
 });
 
