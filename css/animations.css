@@ -1,0 +1,394 @@
+/*==================================================
+    FASTCARE DIAGNOSTICS
+    ANIMATIONS
+==================================================*/
+
+/*============ FADE IN ============*/
+
+.fade-up{
+
+    opacity:0;
+
+    transform:translateY(50px);
+
+    transition:.8s ease;
+
+}
+
+.fade-up.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+/*============ FADE LEFT ============*/
+
+.fade-left{
+
+    opacity:0;
+
+    transform:translateX(-60px);
+
+    transition:.8s ease;
+
+}
+
+.fade-left.show{
+
+    opacity:1;
+
+    transform:translateX(0);
+
+}
+
+
+/*============ FADE RIGHT ============*/
+
+.fade-right{
+
+    opacity:0;
+
+    transform:translateX(60px);
+
+    transition:.8s ease;
+
+}
+
+.fade-right.show{
+
+    opacity:1;
+
+    transform:translateX(0);
+
+}
+
+
+/*============ ZOOM ============*/
+
+.zoom{
+
+    opacity:0;
+
+    transform:scale(.8);
+
+    transition:.8s ease;
+
+}
+
+.zoom.show{
+
+    opacity:1;
+
+    transform:scale(1);
+
+}
+
+
+/*============ HERO IMAGE FLOAT ============*/
+
+.hero-image img{
+
+    animation:floatImage 5s ease-in-out infinite;
+
+}
+
+@keyframes floatImage{
+
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-18px);
+
+    }
+
+    100%{
+
+        transform:translateY(0px);
+
+    }
+
+}
+
+
+/*============ BUTTON HOVER ============*/
+
+.primary-btn,
+
+.secondary-btn{
+
+    transition:.35s ease;
+
+}
+
+.primary-btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 15px 30px rgba(217,4,41,.35);
+
+}
+
+.secondary-btn:hover{
+
+    transform:translateY(-5px);
+
+}
+
+
+/*============ CARD HOVER ============*/
+
+.test-card,
+
+.package-card,
+
+.process-box,
+
+.why-card,
+
+.testimonial-card,
+
+.tip-card{
+
+    transition:.35s ease;
+
+}
+
+.test-card:hover,
+
+.package-card:hover,
+
+.process-box:hover,
+
+.why-card:hover,
+
+.testimonial-card:hover,
+
+.tip-card:hover{
+
+    transform:translateY(-12px);
+
+}
+
+
+/*============ ICON ROTATION ============*/
+
+.why-card i,
+
+.process-box i,
+
+.tip-card i{
+
+    transition:.4s ease;
+
+}
+
+.why-card:hover i,
+
+.process-box:hover i,
+
+.tip-card:hover i{
+
+    transform:rotate(12deg) scale(1.15);
+
+}
+
+
+/*============ NAVIGATION LINK ============*/
+
+.nav-links a{
+
+    position:relative;
+
+}
+
+.nav-links a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-6px;
+
+    width:0;
+
+    height:3px;
+
+    background:var(--primary);
+
+    transition:.35s;
+
+}
+
+.nav-links a:hover::after,
+
+.nav-links a.active::after{
+
+    width:100%;
+
+}
+
+
+/*============ LOGO ============*/
+
+.logo img{
+
+    transition:.35s ease;
+
+}
+
+.logo:hover img{
+
+    transform:rotate(-10deg) scale(1.08);
+
+}
+
+
+/*============ BACK TO TOP ============*/
+
+#backToTop{
+
+    animation:bounce 2.5s infinite;
+
+}
+
+@keyframes bounce{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/*============ PRELOADER ============*/
+
+.preloader{
+
+    transition:.5s ease;
+
+}
+
+
+/*============ PAGE LOAD ============*/
+
+body{
+
+    animation:pageFade .5s ease;
+
+}
+
+@keyframes pageFade{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+
+/*============ IMAGE HOVER ============*/
+
+img{
+
+    transition:.35s ease;
+
+}
+
+.test-card:hover img,
+
+.hero-image:hover img{
+
+    transform:scale(1.04);
+
+}
+
+
+/*============ FOOTER SOCIAL ============*/
+
+.social-links a:hover{
+
+    transform:translateY(-6px) rotate(360deg);
+
+}
+
+
+/*============ FAQ ============*/
+
+.faq-item{
+
+    transition:.35s ease;
+
+}
+
+.faq-item.active{
+
+    border-left:5px solid var(--primary);
+
+}
+
+
+/*============ SCROLLBAR ============*/
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+.section-header,
+.hero-text,
+.hero-image{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:.8s ease;
+
+}
+
+.section-header.show,
+.hero-text.show,
+.hero-image.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+
+/*============ END OF FILE ============*/
