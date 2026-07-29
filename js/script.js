@@ -337,9 +337,7 @@ faqItems.forEach(item => {
     ==============================*/
 
     const revealItems = document.querySelectorAll(
-
-".hero-text, .hero-image, .section-header, .test-card, .package-card, .process-box, .why-card, .testimonial-card, .tip-card"
-
+".fade-up, .fade-left, .fade-right, .zoom"
 );
 
     function revealOnScroll() {

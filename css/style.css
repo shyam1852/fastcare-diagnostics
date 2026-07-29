@@ -254,13 +254,13 @@ nav{
 
 .hero-content{
 
-    display:grid;
+    display:flex;
 
-    grid-template-columns:1fr 1fr;
-
-    gap:80px;
+    justify-content:space-between;
 
     align-items:center;
+
+    gap:60px;
 
 }
 
@@ -389,12 +389,18 @@ nav{
 }
 
 .hero-image img{
-    width:100%;
-    max-width:700px;
-    border-radius:25px;
-    display:block;
-}
 
+    width:100%;
+
+    max-width:550px;
+
+    height:380px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+}
 
 /*==================================================
   SECTION COMMON
@@ -2392,3 +2398,156 @@ TESTIMONIALS
 }
 
 
+/*==================================================
+    SECTION HEADER
+==================================================*/
+
+.section-header{
+
+    text-align:center;
+
+    max-width:900px;
+
+    margin:0 auto 60px;
+
+}
+
+.section-header h2{
+
+    font-size:42px;
+
+    margin:20px 0;
+
+}
+
+.section-header p{
+
+    max-width:850px;
+
+    margin:0 auto;
+
+    line-height:1.8;
+
+    color:#666;
+
+}
+
+
+/*==================================================
+    ABOUT PAGE - STORY SECTION
+==================================================*/
+
+.story{
+    padding:100px 0;
+}
+
+.story-content{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:60px;
+}
+
+.story-image{
+    flex:1;
+}
+
+.story-image img{
+    width:100%;
+    max-width:500px;
+    height:350px;
+    object-fit:cover;
+    border-radius:20px;
+    display:block;
+}
+
+.story-text{
+    flex:1;
+}
+
+.story-text h3{
+    font-size:2rem;
+    margin-bottom:20px;
+    color:var(--dark);
+}
+
+.story-text p{
+    font-size:1.1rem;
+    line-height:1.8;
+    color:#555;
+    margin-bottom:30px;
+}
+
+
+/*==================================
+ABOUT PAGE
+==================================*/
+
+.about-story{
+    display:flex;
+    align-items:center;
+    gap:70px;
+    margin-top:70px;
+}
+
+.about-story-image{
+    flex:1;
+}
+
+.about-story-image img{
+    width:100%;
+    max-width:500px;
+    border-radius:20px;
+    display:block;
+}
+
+.about-story-text{
+    flex:1;
+}
+
+.about-story-text h3{
+    font-size:2.2rem;
+    margin-bottom:20px;
+    color:var(--dark);
+}
+
+.about-story-text p{
+    font-size:1.05rem;
+    line-height:1.9;
+    color:#555;
+    margin-bottom:20px;
+}
+
+@media(max-width:992px){
+
+.about-story{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.about-story-image img{
+
+margin:auto;
+
+}
+
+}
+
+
+#our-story{
+    padding: 160px 0;
+}
+
+.section-header{
+    margin-bottom: 80px;
+}
+
+.about-story{
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    margin-top: 20px;
+}
