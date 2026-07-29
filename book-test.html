@@ -177,8 +177,7 @@ Fill in your details below.
 
 </div>
 
-<form
-    <form id="bookingForm">
+<form id="bookingForm" autocomplete="on">
 
     <input
     type="hidden"
@@ -204,6 +203,7 @@ Fill in your details below.
             <input
                 type="text"
                 id="fullName"
+                autocomplete="name"
                 name="Patient Name"
                 required
                 placeholder="Enter your full name">
@@ -217,6 +217,7 @@ Fill in your details below.
             <input
                 type="tel"
                 id="phoneNumber"
+                autocomplete="tel"
                 name="Phone Number"
                 placeholder="9876543210"
                 pattern="[6-9][0-9]{9}"
@@ -232,6 +233,7 @@ Fill in your details below.
             <input
                 type="email"
                 id="email"
+                autocomplete="email"
                 name="Email"
                 required
                 placeholder="example@email.com">
@@ -345,6 +347,7 @@ Fill in your details below.
 
             <textarea
                 name="Address"
+                autocomplete="street-address"
                 rows="4"
                 required
                 placeholder="House No., Street, Area, City"></textarea>
@@ -358,6 +361,7 @@ Fill in your details below.
             <input
                 type="text"
                 name="City"
+                autocomplete="address-level2"
                 required
                 placeholder="Enter your city">
 
@@ -370,6 +374,7 @@ Fill in your details below.
             <input
                 type="text"
                 name="State"
+                autocomplete="address-level1"
                 required
                 placeholder="Enter your state">
 
@@ -382,6 +387,7 @@ Fill in your details below.
             <input
                 type="text"
                 name="PIN Code"
+                autocomplete="postal-code"
                 maxlength="6"
                 pattern="[0-9]{6}"
                 required
