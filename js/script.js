@@ -455,5 +455,17 @@ if (bookingForm && submitBtn && submitText) {
 }
 
 
+});
+
+
+const currentPage = window.location.pathname.split("/").pop();
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+
+    const page = link.getAttribute("href");
+
+    if (page === currentPage || (currentPage === "" && page === "index.html")) {
+        link.classList.add("active");
+    }
 
 });

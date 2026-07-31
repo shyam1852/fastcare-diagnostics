@@ -232,6 +232,57 @@ nav{
 
 }
 
+
+.nav-actions{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.theme-toggle{
+    width:48px;
+    height:48px;
+    border:none;
+    border-radius:50%;
+    background:#f3f4f6;
+    color:#222;
+    cursor:pointer;
+    font-size:20px;
+    transition:.3s;
+    box-shadow:0 4px 12px rgba(0,0,0,.12);
+}
+
+.theme-toggle:hover{
+    transform:scale(1.08);
+    background:#e5e7eb;
+}
+
+/* ===========================
+   NAV ACTIONS
+=========================== */
+
+.nav-actions{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.theme-toggle{
+    width:45px;
+    height:45px;
+    border:none;
+    border-radius:50%;
+    background:#f3f3f3;
+    cursor:pointer;
+    font-size:20px;
+    transition:.3s;
+}
+
+.theme-toggle:hover{
+    background:#e0e0e0;
+    transform:rotate(180deg);
+}
+
 .menu-toggle{
 
     display:none;
@@ -389,19 +440,12 @@ nav{
 }
 
 .hero-image img{
-
-    width:100%;
-
-    max-width:550px;
-
-    height:380px;
-
-    object-fit:cover;
-
-    border-radius:20px;
-
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    border-radius: 20px;
+    display: block;
 }
-
 /*==================================================
   SECTION COMMON
 ==================================================*/
